@@ -8,7 +8,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "local": "ng serve --configuration development"
   },
   "dependencies": {
     "@angular/animations": "^15.1.2",
