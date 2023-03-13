@@ -4,13 +4,21 @@
             <p>Dynamic Form</p>
         </div>
         <div class="dyForm_container">
-            <div class="dyForm_content">
-                <app-dynamic-fields [jsonFormData]="formData | async"></app-dynamic-fields>
-            </div>
-            <div class="dyForm_footer">
-                <button type="button" class="primary" (click)="formSubmit()" [disabled]="appChildComponent?.myForm?.invalid">Submit</button>
-                <button class="secondary" (click)="reset()">Reset</button>
-            </div>
+            <app-dynamic-content>
+                <content-section [app-wheels]="formData | async">
+                    <div class="dyForm_content">
+                        <app-dynamic-fields [jsonFormData]="formData | async">
+                        </app-dynamic-fields>
+                    </div>
+                </content-section>
+                <content-footer>
+                    <div class="dyForm_footer">
+                        <button type="button" class="primary" (click)="formSubmit()"
+                            [disabled]="appChildComponent?.myForm?.invalid">Submit</button>
+                        <button class="secondary" (click)="reset()">Reset</button>
+                    </div>
+                </content-footer>
+            </app-dynamic-content>
         </div>
     </ng-container>
 </div>

@@ -19,11 +19,13 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppInterceptor } from './interceptors/app.interceptor';
 import { ErrorInterceptor } from './interceptors/app-error.interceptor';
+import { DynamicContentComponent } from './dynamic-content/dynamic-content.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DynamicFieldsComponent
+    DynamicFieldsComponent,
+    DynamicContentComponent
   ],
   imports: [
     CommonModule,
