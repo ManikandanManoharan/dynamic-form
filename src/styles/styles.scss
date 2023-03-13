@@ -1,0 +1,16 @@
+/* Add application styles & imports to this file! */
+@import './colors.scss';
+@import './button.scss';
+
+.mat-mdc-text-field-wrapper {
+    min-width: 320px;
+}
+
+body {
+    margin: 0;
+}
+
+:root {
+    --top-header-height: 40px;
+    --footer-height: 32px;
+}

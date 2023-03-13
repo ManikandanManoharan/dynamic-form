@@ -1,0 +1,16 @@
+<div class="dyForm">
+    <ng-container>
+        <div class="dyForm_title">
+            <p>Dynamic Form</p>
+        </div>
+        <div class="dyForm_container">
+            <div class="dyForm_content">
+                <app-dynamic-fields [jsonFormData]="formData | async"></app-dynamic-fields>
+            </div>
+            <div class="dyForm_footer">
+                <button type="button" class="primary" (click)="formSubmit()" [disabled]="appChildComponent?.myForm?.invalid">Submit</button>
+                <button class="secondary" (click)="reset()">Reset</button>
+            </div>
+        </div>
+    </ng-container>
+</div>

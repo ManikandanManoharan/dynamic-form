@@ -1,0 +1,71 @@
+{
+  "controls": [
+    {
+      "name": "userID",
+      "label": "User ID ",
+      "value": "",
+      "type": "text",
+      "placeholder": "Enter User ID",
+      "validators": {
+        "required": true,
+        "minLength": 10
+      },
+      "error": "Minimum 10 characters should be entered."
+    },
+    {
+      "name": "userName",
+      "label": "User Name ",
+      "value": "",
+      "type": "text",
+      "validators": {}
+    },
+    {
+      "name": "date",
+      "label": "D.O.B",
+      "value": "",
+      "type": "date",
+      "placeholder": "Date of Birth",
+      "validators": {}
+    },
+    {
+      "name": "gender",
+      "type": "radio",
+      "value": [
+        "Male",
+        "Female"
+      ],
+      "label": "Gender",
+      "validators": {}
+    },
+    {
+      "name": "hobbies",
+      "label": "Hobbies",
+      "placeholder": "Select Hobbies",
+      "value": [
+        "Books Reading",
+        "Singing",
+        "Tennis"
+      ],
+      "type": "select",
+      "validators": {}
+    },
+    {
+      "name": "comments",
+      "label": "Comments",
+      "value": "",
+      "placeholder": "Enter if any comments",
+      "type": "textarea",
+      "options": {
+        "min": 1
+      },
+      "validators": {}
+    },
+    {
+      "name": "agreeTerms",
+      "label": "I agree ",
+      "value": "true",
+      "type": "checkbox",
+      "validators": {}
+    }
+  ]
+}
