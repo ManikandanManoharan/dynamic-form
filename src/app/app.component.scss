@@ -1,40 +1,39 @@
 @import '../styles/colors.scss';
 
 .dyForm {
+  height: 100%;
+  background: url('../assets/images/bg.png') top repeat;
+
+  &_title {
+    background-color: $header_color;
+    color: $clr-white;
+    height: var(--top-header-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+  }
+
+  &_container {
     height: 100%;
-    background: url('../assets/images/bg.png') top repeat;
+  }
 
-    &_title {
-        background-color: $header_color;
-        color: $clr-white;
-        height: var(--top-header-height);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 22px;
-    }
+  &_content {
+    padding: 14px;
+    height: calc(100vh - (var(--top-header-height) + var(--footer-height)));
+    overflow-y: auto;
+  }
 
-    &_container {
-        height: calc(100% - (var(--top-header-height) + var(--footer-height)));
-        overflow-y: auto;
-    }
-
-    &_content {
-        padding: 14px;
-        overflow-y: auto;
-    }
-
-    &_footer {
-        display: flex;
-        justify-content: flex-end;
-        position: absolute;
-        width: 100%;
-        height: var(--footer-height);
-        gap: 24px;
-        padding: 24px;
-        right: 0;
-        bottom: 0;
-        background-color: $footer_bg;
-    }
-
+  &_footer {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    width: 100%;
+    height: var(--footer-height);
+    gap: 24px;
+    padding: 24px;
+    right: 0;
+    bottom: 0;
+    background-color: $footer_bg;
+  }
 }
