@@ -2,29 +2,43 @@
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/dynamic-form)
 
-AppComponent  -> Parent Component which control the action events
-DynamicFieldsComponent -> Child Component where we're maintaining the Dynamic Form Fields
+The action events are controlled by the AppComponent-> parent component
+Where we retain the Dynamic Form Fields is in the DynamicFieldsComponent -> Child Component.
 
-This app includes the dynamic form fields and dynamic styles (colors, buttons) as well.
-And, error handling controlled by ErrorInterceptor which will supports to control all the error codes at one place.
-AppInterceptor has created to manage the API calls which access generic params when hit the http calls.
+- The dynamic form fields and dynamic styles (colours, buttons) are both built into this app.
+- Moreover, ErrorInterceptor, which permits controlling all error codes in one location, controls error handling.
+- AppInterceptor was developed to control API calls that, when hit by http requests, access generic parameters.
 
 Dynamic form fields:
-  1. my-form.json is the file which holds all the form controls. 
-  2. For each form elements, we can set the name, label, validators, validation error message, placeholders etc..,
+  1. my-form.json, The file containing all of the form controls. 
+  2. We could set the name, label, validators, validation error message, placeholders, etc. for each form element.
 
 View Child:
-  1. In AppComponent loads the dynamic-form fileds and passed the json object to DynamicFieldsComponent and controlled the form event changes in AppComponent using @ViewChild.
+  1. The AppComponent loads the dynamic form fields, passes the JSON data to the DynamicFieldsComponent, and uses the @ViewChild annotated to handle form event modifications.
 
-  2. To prove the validation, Submit buttom  will be enabled when the required form fields are correctly filled and the Reset button clears the Child component form values.
+  2.  To demonstrate validation, the Submit button will turn on after all required form fields have been correctly filled in and the Child component form values have been reset when trigger Reset Button.
 
 Error Validation:
-  1. Form fileds validation given an example for User ID form element and display the error messages when form filed is dirty.
-
-  2. In terms of styles, used the pre-processor to adhere the styles.
+  1. Indicating error messages when a form field is dirty and provided an example for the User ID form element.
+  
+Common Styles:
+ - When it comes to styles, apply the styles using the pre-processor.
 
 HTTP Request:
-  - Used the window.alert just to show the http error messages when the data passes to http call when trigger the submit button.
+  - Uses window.alert just to display HTTP error messages when data is passed to an HTTP request and the submit button is pressed.
   
 ng-content:
-  - used in ng-content branch on the same repo as a initial version.. Will catchup when find time..
+  - Utilised in the same repository's ng-content branch as the original version. I'll catch up when I have the time.
+
+
+Run the application:
+  Pre-requesits:
+    angular cli: 15.1.0-next.2
+    Angular: 15.2.2
+    Node: 16.17.1 or above
+    npm: 8.15.0 or above
+  To run in local:
+    1. Run the install command "npm i" or "npm install"
+    2. Now Run the app in local with command, "npm run local"
+    
+    
